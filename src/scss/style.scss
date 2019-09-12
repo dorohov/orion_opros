@@ -1,0 +1,267 @@
+@import "../../img/svg/sprite.scss";
+@import "normalize";
+@import "fonts";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Akzidenz-Grotesk Pro';
+}
+
+.btn-group {
+    button {
+        transition: .25s all ease;
+        &::after {
+            transition: .25s all ease;
+        }
+    }
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 16px;
+    color: #132C81;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 30px;
+    border: 3px solid #E2408C;
+    border-radius: 47px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    &::before,
+    &::after {
+        content: '';
+        width: 7px;
+        height: 3px;
+        position: absolute;
+    }
+    &::before {
+        top: -3px;
+        right: 30px;
+    }
+    &::after {
+        bottom: -3px;
+        left: 30px;
+    }
+    &.is--white {
+        color: #fff;
+    }
+    &.is--d-blue {
+        &::before,
+        &::after {
+            background: #16C6C5;
+        }
+    }
+    &.is--d-white {
+        &::before,
+        &::after {
+            background: #fff;
+        }
+    }
+}
+
+.display {
+    width: 100vw;
+    &.is--white {
+        background: #fff;
+    }
+    &__inner {
+        max-width: 500px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    &__logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    &__desc {
+        margin-bottom: 50px;
+        font-size: 16px;
+        line-height: 21px;
+        color: #fff;
+        text-align: center;
+    }
+    &__btn {
+        text-align: center;
+    }
+    &__qtitle {
+        font-weight: bold;
+        font-size: 24px;
+        color: #132C81;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &__qdesc {
+        text-align: center;
+        color: #5A5A5A;
+        margin-bottom: 45px;
+    }
+    &__rating {
+        display: flex;
+        margin-bottom: 45px;
+        button {
+            width: 43px;
+            height: 43px;
+            margin: 0 4px;
+            cursor: pointer;
+            border: 2px solid #E6E9F2;
+            background: transparent;
+            font-weight: 600;
+            font-size: 18px;
+            color: #132C81;
+            border-radius: 3px;
+            &.is--active {
+                background: #DF237A;
+                border-color: #DF237A;
+                color: #fff;
+            }
+        }
+    }
+    &__select {
+        margin-bottom: 40px;
+        button {
+            width: 100%;
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border: 2px solid #E6E9F2;
+            background: transparent;
+            color: #132C81;
+            border-radius: 3px;
+            padding: 10px 0 10px 35px;
+            text-align: left;
+            color: #5A5A5A;
+            position: relative;
+            &::after {
+                content: '';
+                width: 7px;
+                height: 7px;
+                position: absolute;
+                top: 50%;
+                margin-top: -2px;
+                left: 20px;
+                border: 1px solid #132C81;
+                border-radius: 100%;
+            }
+            &.is--active {
+                background: #DF237A;
+                border-color: #DF237A;
+                color: #fff;
+                &::after {
+                    border-color: #fff;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 8px #FFFFFF;
+                }
+            }
+        }
+    }
+    &__yn {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        button {
+            margin-bottom: 5px;
+            cursor: pointer;
+            border: 2px solid #E6E9F2;
+            background: transparent;
+            color: #132C81;
+            border-radius: 3px;
+            padding: 10px 20px 10px 40px;
+            text-align: left;
+            color: #5A5A5A;
+            position: relative;
+            margin: 0 7px;
+            &::after {
+                content: '';
+                width: 7px;
+                height: 7px;
+                position: absolute;
+                top: 50%;
+                margin-top: -2px;
+                left: 20px;
+                border: 1px solid #132C81;
+                border-radius: 100%;
+            }
+            &.is--active {
+                background: #DF237A;
+                border-color: #DF237A;
+                color: #fff;
+                &::after {
+                    border-color: #fff;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 8px #FFFFFF;
+                }
+            }
+        }
+    }
+    &__field {
+        margin-bottom: 35px;
+        input {
+            width: 100%;
+            border: 2px solid #132C81;
+            border-radius: 3px;
+            background: transparent;
+            color: #132C81;
+            font-size: 14px;
+            padding: 15px 25px;
+            &::placeholder {
+                color: #132C81;
+            }
+        }
+    }
+    &__soc {
+        &__heading {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 18px;
+            color: #fff;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                a {
+                    margin: 0 7.5px;
+                    width: 41px;
+                    height: 41px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #FDD34C;
+                    border-radius: 100%;
+                    svg {
+                        fill: #132C81;
+                    }
+                }
+            }
+        }
+    }
+    &n,
+    &8 {
+        background: #16C6C5;
+    }
+}

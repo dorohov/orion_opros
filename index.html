@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Помогите нам стать лучше!</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="display displayn" id="display1">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="display__title">
+                        Приветствуем!
+                    </div>
+                    <div class="display__desc">
+                        Благодарим Вас за сотрудничество <br>
+                        с нашей типографией и просим ответить на несколько вопросов.<br>
+                        Это займёт не более 5 минут. <br>
+                        Опрос полностью анонимный.
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(2, 0, 0)" class="btn is--white is--d-blue">Пройти опрос</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display1 is--white" id="display2">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 1 из 7</div>
+                    <div class="display__qdesc">
+                        Оцените сервис нашей типографии <br>
+                        по 5-ти бальной шкале
+                    </div>
+                    <div class="display__rating btn-group">
+                        <button data-val="1" data-q="1">1</button>
+                        <button data-val="2" data-q="1">2</button>
+                        <button data-val="3" data-q="1">3</button>
+                        <button data-val="4" data-q="1">4</button>
+                        <button data-val="5" data-q="1">5</button>
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(3, 1, 1)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display2 is--white" id="display3">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 2 из 7</div>
+                    <div class="display__qdesc">
+                        Как вы узнали о нашей типографии?
+                    </div>
+                    <div class="display__select btn-group">
+                        <button data-q="2" data-val="От знакомых">От знакомых</button>
+                        <button data-q="2" data-val="Карты и другие справочник">Карты и другие справочники</button>
+                        <button data-q="2" data-val="ВКонтакте, Instagram">ВКонтакте, Instagram</button>
+                        <button data-q="2" data-val="Поиск в Google">Поиск в Google</button>
+                        <button data-q="2" data-val="Поиск в Yandex">Поиск в Yandex</button>
+                        <button data-q="2" data-val="Уже давно знаю о вас">Уже давно знаю о вас</button>
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(4, 1, 2)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display3 is--white" id="display4">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 3 из 7</div>
+                    <div class="display__qdesc">
+                        Как давно вы состоите в нашей <br> группе?
+                    </div>
+                    <div class="display__select btn-group">
+                        <button data-q="3" data-val="Менее 1 месяца">Менее 1 месяца</button>
+                        <button data-q="3" data-val="От 1 до 6 месяцев">От 1 до 6 месяцев</button>
+                        <button data-q="3" data-val="От 6 месяцев до года">От 6 месяцев до года</button>
+                        <button data-q="3" data-val="Более года">Более года</button>
+                        <button data-q="3" data-val="Не состою в группе">Не состою в группе</button>
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(5, 1, 3)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display4 is--white" id="display5">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 4 из 7</div>
+                    <div class="display__qdesc">
+                        Удобно ли вам было добираться <br>
+                        до нас?
+                    </div>
+                    <div class="display__yn btn-group">
+                        <button data-q="4" data-val="Да">Да</button>
+                        <button data-q="4" data-val="Нет">Нет</button>
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(6, 1, 4)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display5 is--white" id="display6">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 5 из 7</div>
+                    <div class="display__qdesc">
+                        Вежливо ли к вам обращались <br> сотрудники нашей типографии?
+                    </div>
+                    <div class="display__yn btn-group">
+                        <button data-q="5" data-val="Да">Да</button>
+                        <button data-q="5" data-val="Нет">Нет</button>
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(7, 1, 5)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display6 is--white" id="display7">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 6 из 7</div>
+                    <div class="display__qdesc">
+                        Что нам необходимо сделать, <br>
+                        чтобы стать лучше?
+                    </div>
+                    <div class="display__field">
+                        <input type="text" placeholder="Введите сообщение">
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(8, 2, 6)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display7 is--white" id="display8">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__qtitle">Вопрос 7 из 7</div>
+                    <div class="display__qdesc">
+                        Укажите ваш возраст?
+                    </div>
+                    <div class="display__field">
+                        <input type="text" placeholder="Введите сообщение">
+                    </div>
+                    <div class="display__btn">
+                        <a onclick="setWindow(9, 2, 7)" class="btn is--d-white">Далее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display display8" id="display9">
+            <div class="display__inner">
+                <div class="display__container">
+                    <div class="display__logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="display__title">
+                        Спасибо!
+                    </div>
+                    <div class="display__desc">
+                        Благодарим Вас за участие в опросе. <br>
+                        Ваши ответы помогут сделать нам <br>
+                        сервис максимально комфортным <br>
+                        и удобным для Вас.
+                    </div>
+                    <div class="display__soc">
+                        <div class="display__soc__heading">Оставить отзыв</div>
+                        <ul>
+                            <li>
+                                <a href="#"><svg class="svg-vk-dims svg is--vk">
+                                        <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                    </svg></a>
+                            </li>
+                            <li>
+                                <a href="#"><svg class="svg-fb-dims svg is--fb">
+                                        <use xlink:href="img/svg/sprites.svg#fb"></use>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+
+</html>
